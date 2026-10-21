@@ -1,0 +1,464 @@
+<!doctype html><html lang="he"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="אנגלית">
+<meta name="theme-color" content="#2c5fd6">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+*,*::before,*::after{box-sizing:inherit}body{margin:0;font:14px system-ui,-apple-system,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head><body>
+<title>Present Simple Practice</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&family=Assistant:wght@400;600;700&display=swap">
+<style>
+/* Layout: a single worksheet sheet on a desk, sticky pencil toolbar, ink canvas over the whole sheet */
+:root{
+  --desk:#e9edf3; --sheet:#ffffff; --ink:#1c2230; --muted:#5f6878; --line:#b9c3d3; --accent:#2c5fd6;
+  --key:#d03b3b; --tint:#eef3fd; --bar:#ffffff; --bar-2:#e8ecf2;
+  --en:"Lexend",system-ui,sans-serif; --he:"Assistant",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--desk:#171a20;--bar:#23272f;--bar-2:#323743;color-scheme:dark}}
+:root[data-theme="dark"]{--desk:#171a20;--bar:#23272f;--bar-2:#323743;color-scheme:dark}
+html,body{height:100%}
+html{overflow:hidden}
+body{background:var(--desk);margin:0;font-family:var(--en);color:var(--ink);-webkit-touch-callout:none;
+  display:flex;flex-direction:column;overflow:hidden;overscroll-behavior:none}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bar)}
+#bar{position:relative;flex:none;z-index:5;background:var(--bar);border-bottom:1px solid var(--bar-2);
+  display:flex;flex-wrap:wrap;gap:8px;align-items:center;direction:rtl;font-family:var(--he);
+  padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  -webkit-user-select:none;user-select:none}
+.grp{display:flex;gap:3px;padding:3px;background:var(--bar-2);border-radius:12px;align-items:center}
+#bar button{font:inherit;font-size:15px;font-weight:600;color:light-dark(#1c2230,#eceef2);background:transparent;border:0;border-radius:9px;
+  min-width:44px;height:40px;padding:0 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+#bar button[aria-pressed="true"]{background:var(--bar);box-shadow:0 1px 3px rgba(0,0,0,.18);color:var(--accent)}
+#bar button:disabled{opacity:.35}
+#bar button:focus-visible{outline:2px solid var(--accent)}
+.sw{min-width:30px!important;width:30px;height:30px!important;padding:0!important;border-radius:50%!important}
+.sw[aria-pressed="true"]{box-shadow:0 0 0 2px var(--bar),0 0 0 4px var(--accent)!important}
+.spacer{flex:1}
+.wrap{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding-block:20px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+#sheet{position:relative;max-width:1180px;margin:0 auto;background:var(--sheet);color:#1c2230;border-radius:6px;
+  box-shadow:0 2px 14px rgba(20,30,60,.12);padding:36px 40px 48px}
+#ink{position:absolute;inset:0;width:100%;height:100%;z-index:3;touch-action:pan-y}
+header.top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-bottom:3px solid #1c2230;padding-bottom:12px}
+h1{margin:0;font-size:44px;letter-spacing:-.5px;text-wrap:balance}
+h1 small{display:block;font-size:14px;font-weight:500;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.meta{display:flex;gap:18px;font-size:15px;color:var(--muted)}
+.meta span{display:inline-block;min-width:150px;border-bottom:1.5px solid var(--line);padding-bottom:18px}
+/* rules */.rules{margin-top:22px;background:var(--tint);border-radius:10px;padding:18px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px 28px;font-size:18px;line-height:1.55}
+.rules h3{margin:0 0 4px;font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent)}
+.rules b{color:#1c2230}
+.rules em{font-style:normal;color:var(--key);font-weight:700}
+section.ex{margin-top:44px}
+.ex h2{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:25px;margin:0 0 4px}
+.ex h2 .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#1c2230;color:#fff;font-size:15px;flex:none}
+.ex h2 .pts{margin-inline-start:auto;font-size:13px;color:var(--muted);font-weight:500}
+.he{direction:rtl;font-family:var(--he);color:var(--muted);font-size:18px;margin:0 0 12px 40px;text-align:right}
+ol{margin:0;padding-inline-start:54px;display:flex;flex-direction:column;gap:30px;font-size:23px;line-height:1.6}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px 64px;font-size:23px;list-style:none;padding-inline-start:54px}
+.cols li{display:flex;align-items:flex-end;gap:10px}
+.b{display:inline-block;min-width:190px;border-bottom:1.5px solid var(--line);height:1.4em;vertical-align:bottom}
+.b.s{min-width:120px}
+.wl{display:block;height:70px;border-bottom:1.5px solid var(--line);margin-top:4px}
+.c{font-weight:500;color:var(--accent);white-space:nowrap}
+.hint{color:var(--muted);font-size:15px}
+/* answers always take their space so handwriting never shifts when the key is toggled */
+.ans{visibility:hidden;color:var(--key);font-family:var(--en);font-size:18px;font-weight:700;margin-inline-start:8px}
+.ans.blk{display:block;margin:4px 0 0;min-height:1.4em}
+body.key .ans{visibility:visible}
+.mark{font-weight:700}
+.ok{color:#1f9a5c}.no{color:var(--key)}
+footer{margin-top:36px;padding-top:12px;border-top:1px dashed var(--line);font-size:14px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.score{font-family:var(--he);direction:rtl}
+.sheetConf{position:fixed;inset:0;background:rgba(10,12,20,.55);display:grid;place-items:center;z-index:20;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.card{background:var(--bar);color:light-dark(#1c2230,#eceef2);border-radius:16px;padding:20px;direction:rtl;font-family:var(--he);display:flex;flex-direction:column;gap:12px;max-width:360px}
+.card h3{margin:0;font-size:19px}.card p{margin:0}
+.card .row{display:flex;gap:8px}
+.card button{font:inherit;font-weight:600;font-size:15px;border:0;border-radius:9px;height:42px;padding:0 16px;cursor:pointer}
+.card .go{background:var(--key);color:#fff}.card .no2{background:var(--bar-2);color:inherit}
+/* checking */
+.cols li{align-items:center}
+.cols li .ans{position:absolute;left:auto;inset-inline-start:0;top:100%;margin:2px 0 0}
+
+#tally{font-weight:700;font-size:15px;color:#1f9a5c;padding:0 10px;font-variant-numeric:tabular-nums}
+#pop .q{margin:4px 0 0;font-weight:700}
+.pop-btns{display:flex;gap:8px}
+.pop-btns button{flex:1;height:46px;border:0;border-radius:12px;font:700 17px/1 var(--he);cursor:pointer;color:#fff}
+.pop-btns .yes{background:#1f9a5c}.pop-btns .no{background:#d03b3b}
+#pop.ask{border-top-color:var(--accent)}
+.hint2{color:#5f6878;font-size:15px}
+
+#fab{position:fixed;left:max(12px,env(safe-area-inset-left,0px));top:50%;transform:translateY(-50%);z-index:8;width:64px;height:64px;
+  border-radius:50%;border:0;background:var(--bar);color:var(--accent);box-shadow:0 4px 18px rgba(20,30,60,.28);cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-family:var(--he);-webkit-user-select:none;user-select:none}
+#fab .ic{font-size:24px;line-height:1}#fab .lb{font-size:13px;font-weight:700}
+#fab[data-tool="eraser"]{background:var(--key);color:#fff}
+#fab:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+/* per-question check buttons */
+.why{position:absolute;right:-72px;top:calc(.1em + 44px);height:34px;min-width:62px;padding:0 8px;border-radius:17px;border:0;cursor:pointer;
+  background:#fff3d6;color:#8a5a00;box-shadow:inset 0 0 0 1.5px #e09a14;font:700 14px/1 var(--he);z-index:4;
+  display:inline-flex;align-items:center;justify-content:center;-webkit-user-select:none;user-select:none}
+.cols .why{position:static;height:32px;min-width:0;padding:0 8px;font-size:12px;margin-inline-start:4px;flex:none}
+.why:active{transform:scale(.94)}
+body:not(.checkMode) .why{display:none}
+body:not(.checkMode) #pop{display:none}
+#pop{position:absolute;z-index:7;background:#fff;color:#1c2230;border-radius:14px;box-shadow:0 12px 36px rgba(20,30,60,.3),0 0 0 1px rgba(20,30,60,.06);
+  padding:12px 16px 14px;direction:rtl;font-family:var(--he);font-size:17px;line-height:1.5;border-top:6px solid var(--key);
+  display:flex;flex-direction:column;gap:6px}
+#pop.partial{border-top-color:#e09a14}#pop.blank{border-top-color:#9aa3b2}
+#pop p{margin:0}
+.pop-h{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:700;font-size:18px}
+.chip{display:inline-block;font-size:13px;font-weight:700;color:#fff;background:var(--key);border-radius:10px;padding:2px 8px;vertical-align:middle}
+#pop.partial .chip{background:#e09a14}#pop.blank .chip{background:#9aa3b2}
+.pop-x{border:0;background:#eef1f6;color:#1c2230;width:34px;height:34px;border-radius:50%;font-size:15px;cursor:pointer;flex:none}
+.pop-row .lbl{color:#5f6878;font-weight:600}
+.pop-row .en{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-weight:600;color:var(--key)}
+.pop-row .en.ok{color:#1f9a5c}
+.pop-tip{background:#fff8e6;border-radius:10px;padding:8px 12px;font-size:17px}
+.pop-tip::before{content:"💡 ";}
+
+#sheet ol{padding-inline-end:76px}
+.ck{position:absolute;right:-72px;top:.1em;height:38px;min-width:62px;padding:0 10px;border-radius:19px;border:0;cursor:pointer;
+  background:var(--tint);color:var(--accent);box-shadow:inset 0 0 0 1.5px var(--accent);font:700 15px/1 var(--he);z-index:4;
+  display:inline-flex;align-items:center;justify-content:center;gap:4px;-webkit-user-select:none;user-select:none}
+.cols .ck{position:static;height:32px;min-width:50px;padding:0 8px;font-size:13px;margin-inline-start:4px;flex:none}
+.ck:active{transform:scale(.94)}
+.ck.busy{animation:pulse 1s ease-in-out infinite;pointer-events:none}
+body:not(.checkMode) .ck{display:none}
+body:not(.checkMode) #sheet ol{padding-inline-end:0}
+#sheet ol{list-style:none}
+.qn{position:absolute;right:calc(100% + 10px);top:.2em;min-width:36px;height:36px;padding:0 6px;border-radius:18px;border:0;
+  background:transparent;color:var(--accent);font:700 19px/1 var(--en);font-variant-numeric:tabular-nums;display:grid;place-items:center;
+  z-index:4;pointer-events:none;cursor:pointer;transition:background .15s,color .15s}
+.cols .qn{position:absolute;right:calc(100% + 6px)}
+body.checkMode .qn.correct{background:#1f9a5c;color:#fff;box-shadow:none}
+body.checkMode .qn.wrong{background:#d03b3b;color:#fff;box-shadow:none}
+body.checkMode .qn.partial{background:#e09a14;color:#fff;box-shadow:none}
+body.checkMode .qn.blank{background:#9aa3b2;color:#fff;box-shadow:none}
+body.checkMode .qn.busy{animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+body:not(.checkMode):not(.key) .ans.show{visibility:hidden}
+.tg .knob{width:42px;height:26px;border-radius:13px;background:#b8bfcc;position:relative;flex:none;transition:background .2s}
+.tg .knob::after{content:"";position:absolute;top:3px;inset-inline-start:3px;width:20px;height:20px;border-radius:50%;background:#fff;
+  box-shadow:0 1px 2px rgba(0,0,0,.3);transition:transform .2s}
+.tg[aria-checked="true"] .knob{background:var(--accent)}
+#keyBtn[aria-checked="true"] .knob{background:var(--key)}
+.tg[aria-checked="true"] .knob::after{transform:translateX(-16px)}
+@media (prefers-reduced-motion:reduce){.qn,.tg .knob,.tg .knob::after{transition:none}body.checkMode .qn.busy{animation:none;opacity:.5}}
+
+#checkBtn{background:var(--accent)!important;color:#fff!important}
+#checkBtn:disabled{opacity:.6}
+.ans.show{visibility:visible}
+li{position:relative}
+#panel{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--bar);color:light-dark(#1c2230,#eceef2);
+  border-top:1px solid var(--bar-2);box-shadow:0 -8px 30px rgba(0,0,0,.18);direction:rtl;font-family:var(--he);
+  max-height:55vh;display:flex;flex-direction:column;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+#panel .ph{display:flex;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}
+#panel .big{font:700 30px/1 var(--en);font-variant-numeric:tabular-nums}
+#panel .big small{font-size:17px;color:var(--muted)}
+#panel .st{color:var(--muted);font-size:15px;flex:1;min-width:0}
+#panel .x{font:inherit;font-weight:600;border:0;border-radius:9px;height:40px;padding:0 14px;background:var(--bar-2);color:inherit;cursor:pointer}
+#panel .x.stop{background:#d03b3b;color:#fff}
+#list{overflow-y:auto;padding-bottom:14px;display:flex;flex-direction:column;gap:8px}
+.it{background:var(--bar-2);border-radius:10px;padding:10px 12px;font-size:15px;line-height:1.45}
+.it b{font-weight:700}
+.it .en{direction:ltr;unicode-bidi:isolate;font-family:var(--en);font-size:14px}
+.it .tip{color:var(--muted);margin-top:2px}
+.good{color:#1f9a5c;font-weight:700;font-size:16px}
+body.panelOpen .wrap{padding-bottom:58vh}
+@media (max-width:600px){#sheet{padding:24px 18px 36px}h1{font-size:27px}ol,.cols{padding-inline-start:34px}.he{margin-left:0}
+  .qn{min-width:28px;height:28px;font-size:15px;right:calc(100% + 4px)}
+  #sheet ol{padding-inline-end:54px}.ck{right:-52px;min-width:46px;height:32px;font-size:13px;padding:0 6px}
+  #fab{width:54px;height:54px}
+  .why{right:-52px;min-width:46px;height:30px;font-size:12px;top:calc(.1em + 38px)}
+  ol,.cols{font-size:19px;gap:24px}.b{min-width:130px}.b.s{min-width:80px}.wl{height:56px}}
+</style>
+
+<div id="bar" role="toolbar" aria-label="כלי כתיבה">
+  <div class="grp">
+    <button id="t-pen" aria-pressed="true">✎ עט</button>
+    <button id="t-eraser" aria-pressed="false">מחק</button>
+  </div>
+  <div class="grp" id="colors"></div>
+  <div class="grp">
+    <button id="undo" aria-label="בטל">↶ בטל</button>
+    <button id="redo" aria-label="חזור">↷</button>
+  </div>
+  <span class="spacer"></span>
+  <div class="grp">
+    <button class="tg" id="keyBtn" role="switch" aria-checked="false"><span class="knob"></span>תשובות</button>
+    <button class="tg" id="modeBtn" role="switch" aria-checked="true"><span class="knob"></span>בדיקה</button>
+    <span id="tally" hidden></span>
+    <button id="clear">נקה הכל</button>
+  </div>
+</div>
+<button id="fab" type="button" aria-label="החלף בין עט למחק"><span class="ic">✎</span><span class="lb">עט</span></button>
+
+<div class="wrap">
+<div id="sheet">
+  <canvas id="ink"></canvas>
+  <div id="pop" role="dialog" aria-live="polite" hidden></div>
+
+  <header class="top">
+    <h1><small>English · Grammar Worksheet</small>Present Simple</h1>
+    <div class="meta"><span>Name:</span><span>Date:</span></div>
+  </header>
+
+  <div class="rules">
+    <div><h3>Positive</h3>I / You / We / They <b>sleep</b> at night.<br>He / She / It <b>sleep<em>s</em></b> in the day.<br>have → <em>has</em></div>
+    <div><h3>Spelling</h3>dress → dress<em>es</em> · wash → wash<em>es</em><br>watch → watch<em>es</em> · fix → fix<em>es</em> · go → go<em>es</em><br>study → stud<em>ies</em> · but: play → play<em>s</em></div>
+    <div><h3>Negative</h3>Wolves <b>don't</b> wear clothes.<br>Hasit <b>doesn't</b> live in the village.</div>
+    <div><h3>Questions</h3><b>Do</b> you read every day? — Yes, I do. / No, I don't.<br><b>Does</b> he read? — Yes, he does. / No, he doesn't.<br>Where <b>does</b> he read books?</div>
+    <div><h3>Time expressions</h3>on Mondays · in the morning · at night<br>every day / week · once a week<br>always, usually, often, sometimes, never</div>
+  </div>
+
+  <section class="ex">
+    <h2><span class="n">A</span>Add -s, -es or -ies<span class="pts">/8</span></h2>
+    <p class="he">כתבו את הפועל בגוף שלישי יחיד (he / she / it).</p>
+    <ul class="cols">
+      <li data-tip="dress נגמר ב-ss. מילים שנגמרות ב-ss, sh, ch, x או o מקבלות es בגוף שלישי (he / she / it).">dress → <span class="b s"></span><span class="ans">dresses</span></li>
+      <li data-tip="wash נגמר ב-sh. מילים שנגמרות ב-ss, sh, ch, x או o מקבלות es בגוף שלישי (he / she / it).">wash → <span class="b s"></span><span class="ans">washes</span></li>
+      <li data-tip="watch נגמר ב-ch. מילים שנגמרות ב-ss, sh, ch, x או o מקבלות es בגוף שלישי (he / she / it).">watch → <span class="b s"></span><span class="ans">watches</span></li>
+      <li data-tip="fix נגמר ב-x. מילים שנגמרות ב-ss, sh, ch, x או o מקבלות es בגוף שלישי (he / she / it).">fix → <span class="b s"></span><span class="ans">fixes</span></li>
+      <li data-tip="go נגמר ב-o. מילים שנגמרות ב-ss, sh, ch, x או o מקבלות es בגוף שלישי (he / she / it).">go → <span class="b s"></span><span class="ans">goes</span></li>
+      <li data-tip="study נגמר בעיצור (d) + y. במקרה כזה מחליפים את ה-y ב-ies: studies.">study → <span class="b s"></span><span class="ans">studies</span></li>
+      <li data-tip="play נגמר ב-y, אבל לפני ה-y יש תנועה (a). אז לא משנים כלום, רק מוסיפים s: plays.">play → <span class="b s"></span><span class="ans">plays</span></li>
+      <li data-tip="have יוצא דופן: עם he / she / it אומרים has.">have → <span class="b s"></span><span class="ans">has</span></li>
+    </ul>
+  </section>
+
+  <section class="ex">
+    <h2><span class="n">B</span>Fill in the correct form<span class="pts">/10</span></h2>
+    <p class="he">השלימו את הפועל שבסוגריים בצורה הנכונה.</p>
+    <ol>
+      <li data-tip="A wolf = it (זאב אחד). אחרי he / she / it מוסיפים s לפועל: sleeps.">A wolf <span class="b"></span> <span class="c">(sleep)</span> in the day.<span class="ans">sleeps</span></li>
+      <li data-tip="Wolves = they (הרבה זאבים). ברבים הפועל נשאר בלי s: eat.">Wolves <span class="b"></span> <span class="c">(eat)</span> wild animals.<span class="ans">eat</span></li>
+      <li data-tip="Peter = he. אחרי he / she / it מוסיפים s: lives.">Peter <span class="b"></span> <span class="c">(live)</span> with his grandfather.<span class="ans">lives</span></li>
+      <li data-tip="My mother = she. watch נגמר ב-ch, ולכן מוסיפים es: watches.">My mother <span class="b"></span> <span class="c">(watch)</span> the news every evening.<span class="ans">watches</span></li>
+      <li data-tip="Dana = she. study נגמר בעיצור + y, ולכן מחליפים ב-ies: studies.">Dana <span class="b"></span> <span class="c">(study)</span> English on Mondays.<span class="ans">studies</span></li>
+      <li data-tip="We – אחרי I / you / we / they הפועל נשאר בלי s: go.">We <span class="b"></span> <span class="c">(go)</span> to the park once a week.<span class="ans">go</span></li>
+      <li data-tip="He – have יוצא דופן: עם he / she / it אומרים has.">He <span class="b"></span> <span class="c">(have)</span> blue eyes.<span class="ans">has</span></li>
+      <li data-tip="The bird = it. fly נגמר בעיצור + y, ולכן flies.">The bird <span class="b"></span> <span class="c">(fly)</span> in the morning.<span class="ans">flies</span></li>
+      <li data-tip="I – אחרי I הפועל נשאר בלי s: wash.">I always <span class="b"></span> <span class="c">(wash)</span> my hands before dinner.<span class="ans">wash</span></li>
+      <li data-tip="My brother = he. fix נגמר ב-x, ולכן מוסיפים es: fixes.">My brother <span class="b"></span> <span class="c">(fix)</span> bikes at night.<span class="ans">fixes</span></li>
+    </ol>
+  </section>
+
+  <section class="ex">
+    <h2><span class="n">C</span>Circle don't or doesn't<span class="pts">/6</span></h2>
+    <p class="he">הקיפו את התשובה הנכונה.</p>
+    <ol>
+      <li data-tip="Wolves זה רבים (they), ולכן don&#x27;t.">Wolves ( don't / doesn't ) wear clothes.<span class="ans">don't</span></li>
+      <li data-tip="A wolf זה אחד (it), ולכן doesn&#x27;t.">A wolf ( don't / doesn't ) have small teeth.<span class="ans">doesn't</span></li>
+      <li data-tip="Hasit זו אחת (she), ולכן doesn&#x27;t.">Hasit ( don't / doesn't ) live in the village.<span class="ans">doesn't</span></li>
+      <li data-tip="Children זה רבים (they), ולכן don&#x27;t.">Children ( don't / doesn't ) live in the sea.<span class="ans">don't</span></li>
+      <li data-tip="Israel = it, ולכן doesn&#x27;t.">Israel ( don't / doesn't ) always have snow.<span class="ans">doesn't</span></li>
+      <li data-tip="עם I משתמשים תמיד ב-don&#x27;t.">I ( don't / doesn't ) sleep in the day.<span class="ans">don't</span></li>
+    </ol>
+  </section>
+
+  <section class="ex">
+    <h2><span class="n">D</span>Make the sentences negative<span class="pts">/15</span></h2>
+    <p class="he">כתבו את המשפט בשלילה (don't / doesn't).</p>
+    <ol>
+      <li data-tip="A wolf = it, ולכן doesn&#x27;t. אחרי doesn&#x27;t הפועל חוזר לצורת הבסיס, בלי s: lives ← live.">A wolf lives in the forest.<span class="wl"></span><span class="ans blk">A wolf doesn&#39;t live in the forest.</span></li>
+      <li data-tip="Wolves = they, ולכן don&#x27;t. אחרי don&#x27;t בא הפועל בצורת הבסיס: hunt.">Wolves hunt in the morning.<span class="wl"></span><span class="ans blk">Wolves don&#39;t hunt in the morning.</span></li>
+      <li data-tip="My grandmother = she, ולכן doesn&#x27;t. אחרי doesn&#x27;t הפועל חוזר לצורת הבסיס, בלי s: reads ← read.">My grandmother reads fairy tales every night.<span class="wl"></span><span class="ans blk">My grandmother doesn&#39;t read fairy tales every night.</span></li>
+      <li data-tip="The children = they, ולכן don&#x27;t. אחרי don&#x27;t בא הפועל בצורת הבסיס: play.">The children play in the garden on Fridays.<span class="wl"></span><span class="ans blk">The children don&#39;t play in the garden on Fridays.</span></li>
+      <li data-tip="Peter&#x27;s grandfather = he, ולכן doesn&#x27;t. אחרי doesn&#x27;t הפועל חוזר לצורת הבסיס, בלי s: likes ← like.">Peter's grandfather likes wolves.<span class="wl"></span><span class="ans blk">Peter&#39;s grandfather doesn&#39;t like wolves.</span></li>
+      <li data-tip="I = I, ולכן don&#x27;t. אחרי don&#x27;t בא הפועל בצורת הבסיס: watch. המילה usually באה אחרי don&#x27;t: don&#x27;t usually watch.">I usually watch TV after school.<span class="wl"></span><span class="ans blk">I don&#39;t usually watch TV after school.</span></li>
+      <li data-tip="Hasit = she, ולכן doesn&#x27;t. אחרי doesn&#x27;t הפועל חוזר לצורת הבסיס, בלי s: has ← have.">Hasit has a family in the village.<span class="wl"></span><span class="ans blk">Hasit doesn&#39;t have a family in the village.</span></li>
+      <li data-tip="We = we, ולכן don&#x27;t. אחרי don&#x27;t בא הפועל בצורת הבסיס: study.">We study English on Sundays.<span class="wl"></span><span class="ans blk">We don&#39;t study English on Sundays.</span></li>
+      <li data-tip="My cat = it, ולכן doesn&#x27;t. אחרי doesn&#x27;t הפועל חוזר לצורת הבסיס, בלי s: sleeps ← sleep.">My cat sleeps at night.<span class="wl"></span><span class="ans blk">My cat doesn&#39;t sleep at night.</span></li>
+      <li data-tip="They = they, ולכן don&#x27;t. אחרי don&#x27;t בא הפועל בצורת הבסיס: wash.">They wash the car once a week.<span class="wl"></span><span class="ans blk">They don&#39;t wash the car once a week.</span></li>
+      <li data-tip="The teacher = he / she, ולכן doesn&#x27;t. אחרי doesn&#x27;t הפועל חוזר לצורת הבסיס, בלי s: gives ← give.">The teacher gives homework every day.<span class="wl"></span><span class="ans blk">The teacher doesn&#39;t give homework every day.</span></li>
+      <li data-tip="You = you, ולכן don&#x27;t. אחרי don&#x27;t בא הפועל בצורת הבסיס: go. המילה often באה אחרי don&#x27;t: don&#x27;t often go.">You often go to the beach.<span class="wl"></span><span class="ans blk">You don&#39;t often go to the beach.</span></li>
+      <li data-tip="Dana = she, ולכן doesn&#x27;t. אחרי doesn&#x27;t הפועל חוזר לצורת הבסיס, בלי s: fixes ← fix.">Dana fixes her bike in the evening.<span class="wl"></span><span class="ans blk">Dana doesn&#39;t fix her bike in the evening.</span></li>
+      <li data-tip="Wolf cubs = they, ולכן don&#x27;t. אחרי don&#x27;t בא הפועל בצורת הבסיס: drink.">Wolf cubs drink milk.<span class="wl"></span><span class="ans blk">Wolf cubs don&#39;t drink milk.</span></li>
+      <li data-tip="My brother = he, ולכן doesn&#x27;t. אחרי doesn&#x27;t הפועל חוזר לצורת הבסיס, בלי s: tidies ← tidy. המילה always באה אחרי doesn&#x27;t: doesn&#x27;t always tidy.">My brother always tidies his room.<span class="wl"></span><span class="ans blk">My brother doesn&#39;t always tidy his room.</span></li>
+    </ol>
+  </section>
+
+  <section class="ex">
+    <h2><span class="n">E</span>Write a question and a short answer<span class="pts">/5</span></h2>
+    <p class="he">כתבו שאלה עם Do / Does ותשובה קצרה לפי הסימן: <span class="mark ok">✔</span> = Yes, <span class="mark no">✘</span> = No.</p>
+    <ol>
+      <li data-tip="Wolves = they, ולכן שואלים עם Do, והתשובה הקצרה: No, they don&#x27;t.">Wolves eat people. <span class="mark no">✘</span><span class="wl"></span><span class="ans blk">Do wolves eat people? No, they don't.</span></li>
+      <li data-tip="Peter = he, ולכן Does. אחרי Does הפועל בלי s: listen. תשובה קצרה: No, he doesn&#x27;t.">Peter listens to his grandfather. <span class="mark no">✘</span><span class="wl"></span><span class="ans blk">Does Peter listen to his grandfather? No, he doesn't.</span></li>
+      <li data-tip="Fairy tales = they, ולכן Do. תשובה קצרה: Yes, they do.">Fairy tales have heroes. <span class="mark ok">✔</span><span class="wl"></span><span class="ans blk">Do fairy tales have heroes? Yes, they do.</span></li>
+      <li data-tip="Your sister = she, ולכן Does, והפועל בלי s: read. תשובה קצרה: Yes, she does.">Your sister reads every day. <span class="mark ok">✔</span><span class="wl"></span><span class="ans blk">Does your sister read every day? Yes, she does.</span></li>
+      <li data-tip="A wolf = it, ולכן Does, והפועל בלי s: sleep. תשובה קצרה: No, it doesn&#x27;t.">A wolf sleeps at night. <span class="mark no">✘</span><span class="wl"></span><span class="ans blk">Does a wolf sleep at night? No, it doesn't.</span></li>
+    </ol>
+  </section>
+
+  <section class="ex">
+    <h2><span class="n">F</span>Wh- questions: do or does?<span class="pts">/6</span></h2>
+    <p class="he">השלימו do או does.</p>
+    <ol>
+      <li data-tip="your friend = he / she, ולכן does.">Where <span class="b s"></span> your friend live?<span class="ans">does</span></li>
+      <li data-tip="school = it, ולכן does.">When <span class="b s"></span> school start?<span class="ans">does</span></li>
+      <li data-tip="you – משתמשים ב-do.">What clothes <span class="b s"></span> you wear in the sun?<span class="ans">do</span></li>
+      <li data-tip="your parents = they, ולכן do.">How <span class="b s"></span> your parents get to work?<span class="ans">do</span></li>
+      <li data-tip="he – משתמשים ב-does.">Why <span class="b s"></span> he like fairy tales?<span class="ans">does</span></li>
+      <li data-tip="they – משתמשים ב-do.">Who <span class="b s"></span> they speak to on the phone?<span class="ans">do</span></li>
+    </ol>
+  </section>
+
+  <section class="ex">
+    <h2><span class="n">G</span>Find the mistake and correct it<span class="pts">/5</span></h2>
+    <p class="he">בכל משפט יש טעות אחת. כתבו את המשפט הנכון.</p>
+    <ol>
+      <li data-tip="She = he / she / it, ולכן have הופך ל-has.">She have a sister.<span class="wl"></span><span class="ans blk">She has a sister.</span></li>
+      <li data-tip="Wolves זה רבים (they), ולכן don&#x27;t ולא doesn&#x27;t.">Wolves doesn't wear clothes.<span class="wl"></span><span class="ans blk">Wolves don't wear clothes.</span></li>
+      <li data-tip="he = he / she / it, ולכן שואלים עם Does ולא Do.">Do he read every day?<span class="wl"></span><span class="ans blk">Does he read every day?</span></li>
+      <li data-tip="your friend = he / she, ולכן does ולא do.">Where do your friend live?<span class="wl"></span><span class="ans blk">Where does your friend live?</span></li>
+      <li data-tip="watch נגמר ב-ch, ולכן מוסיפים es: watches ולא watchs.">My mom watchs TV in the evening.<span class="wl"></span><span class="ans blk">My mom watches TV in the evening.</span></li>
+    </ol>
+  </section>
+
+  <section class="ex">
+    <h2><span class="n">H</span>Write about yourself<span class="pts">/5</span></h2>
+    <p class="he">כתבו 5 משפטים עליכם. בכל משפט השתמשו בביטוי זמן: always, usually, often, sometimes, never, every day, on Mondays, at night.</p>
+    <ol>
+      <li data-tip="בדקו: אחרי he / she / it יש s בפועל, ויש במשפט ביטוי זמן (always, every day, on Mondays…)."><span class="wl"></span></li><li data-tip="בדקו: אחרי he / she / it יש s בפועל, ויש במשפט ביטוי זמן (always, every day, on Mondays…)."><span class="wl"></span></li><li data-tip="בדקו: אחרי he / she / it יש s בפועל, ויש במשפט ביטוי זמן (always, every day, on Mondays…)."><span class="wl"></span></li><li data-tip="בדקו: אחרי he / she / it יש s בפועל, ויש במשפט ביטוי זמן (always, every day, on Mondays…)."><span class="wl"></span></li><li data-tip="בדקו: אחרי he / she / it יש s בפועל, ויש במשפט ביטוי זמן (always, every day, on Mondays…)."><span class="wl"></span></li>
+    </ol>
+    <p class="ans blk" style="margin-left:40px">Example: I usually go to school by bus. I never eat breakfast on Saturdays.</p>
+  </section>
+
+  <footer><span>Present Simple · Positive, Negative, Questions</span><span class="score">ציון: ______ / 60</span></footer>
+</div>
+</div>
+
+<div class="sheetConf" id="conf" hidden>
+  <div class="card"><h3>למחוק את כל מה שכתבת?</h3><p>הדף יחזור להיות נקי.</p>
+    <div class="row"><button class="go" id="confYes">נקה הכל</button><button class="no2" id="confNo">ביטול</button></div></div>
+</div>
+
+<script>
+(()=>{
+const COLORS=['#1c2230','#2c5fd6','#d03b3b','#1f9a5c'];
+const sheet=document.getElementById('sheet'),cv=document.getElementById('ink'),ctx=cv.getContext('2d');
+let strokes=[],redo=[],cur=null,tool='pen',color=COLORS[1],active=null,W=1,scale=1;
+const ls={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+const cw=document.getElementById('colors');
+COLORS.forEach(c=>{const b=document.createElement('button');b.className='sw';b.style.background=c;b.setAttribute('aria-label','צבע');
+  b.onclick=()=>{color=c;setTool('pen')};cw.appendChild(b)});
+function setTool(t){tool=t;['pen','eraser'].forEach(x=>document.getElementById('t-'+x).setAttribute('aria-pressed',x===t));sync()}
+document.getElementById('t-pen').onclick=()=>setTool('pen');
+document.getElementById('t-eraser').onclick=()=>setTool('eraser');
+const fab=document.getElementById('fab');
+fab.onclick=()=>setTool(tool==='pen'?'eraser':'pen');
+function sync(){fab.dataset.tool=tool;fab.querySelector('.ic').textContent=tool==='pen'?'✎':'⌫';fab.querySelector('.lb').textContent=tool==='pen'?'עט':'מחק';[...cw.children].forEach((b,i)=>b.setAttribute('aria-pressed',COLORS[i]===color&&tool==='pen'));
+  document.getElementById('undo').disabled=!strokes.length;document.getElementById('redo').disabled=!redo.length}
+
+// size canvas to the sheet; strokes are stored relative to sheet width so they survive rotation
+function resize(){const r=sheet.getBoundingClientRect();W=r.width;
+  let d=window.devicePixelRatio||1;const max=16e6;if(r.width*r.height*d*d>max)d=Math.sqrt(max/(r.width*r.height));
+  scale=d;cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d);redraw()}
+new ResizeObserver(resize).observe(sheet);
+
+function lw(s,p){const base=s.tool==='eraser'?22:2.6;return s.tool==='eraser'?base:base*(0.35+p*1.1)}
+function seg(s,a,b){const k=W*scale;ctx.save();
+  ctx.globalCompositeOperation=s.tool==='eraser'?'destination-out':'source-over';
+  ctx.strokeStyle=s.color;ctx.lineCap=ctx.lineJoin='round';ctx.lineWidth=lw(s,(a.p+b.p)/2)*scale;
+  ctx.beginPath();ctx.moveTo(a.x*k,a.y*k);ctx.lineTo(b.x*k,b.y*k);ctx.stroke();ctx.restore()}
+function draw(s){const P=s.pts;if(P.length===1)return seg(s,P[0],{...P[0],x:P[0].x+.0001});for(let i=1;i<P.length;i++)seg(s,P[i-1],P[i])}
+function redraw(){ctx.clearRect(0,0,cv.width,cv.height);strokes.forEach(draw);sync()}
+
+function ok(e){return e.pointerType==='pen'||e.pointerType==='mouse'}
+function pt(e){const r=cv.getBoundingClientRect();let p=e.pointerType==='pen'?(e.pressure||.5):.5;
+  return{x:(e.clientX-r.left)/W,y:(e.clientY-r.top)/W,p}}
+cv.addEventListener('pointerdown',e=>{if(!ok(e)||active!==null)return;e.preventDefault();active=e.pointerId;
+  try{cv.setPointerCapture(active)}catch(_){}cur={tool,color,pts:[pt(e)]};redo=[];draw(cur)});
+cv.addEventListener('pointermove',e=>{if(e.pointerId!==active||!cur)return;e.preventDefault();
+  const evs=(e.getCoalescedEvents&&e.getCoalescedEvents())||[];for(const ev of (evs.length?evs:[e])){
+    const p=pt(ev),l=cur.pts[cur.pts.length-1];if(Math.hypot(p.x-l.x,p.y-l.y)*W<.6)continue;
+    p.p=l.p*.55+p.p*.45;cur.pts.push(p);seg(cur,l,p)}});
+function end(e){if(e.pointerId!==active)return;active=null;if(cur){strokes.push(cur);cur=null;sync();save()}}
+cv.addEventListener('pointerup',end);cv.addEventListener('pointercancel',end);
+// Pencil should write, not scroll; fingers still scroll the page
+cv.addEventListener('touchstart',e=>{for(const t of e.touches)if(t.touchType==='stylus'){e.preventDefault();return}},{passive:false});
+cv.addEventListener('touchmove',e=>{for(const t of e.touches)if(t.touchType==='stylus'){e.preventDefault();return}},{passive:false});
+
+document.getElementById('undo').onclick=()=>{if(strokes.length){redo.push(strokes.pop());redraw();save()}};
+document.getElementById('redo').onclick=()=>{if(redo.length){strokes.push(redo.pop());redraw();save()}};
+document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='z'){e.preventDefault();
+  document.getElementById(e.shiftKey?'redo':'undo').click()}});
+
+const conf=document.getElementById('conf');
+document.getElementById('clear').onclick=()=>{conf.hidden=false};
+document.getElementById('confNo').onclick=()=>{conf.hidden=true};
+document.getElementById('confYes').onclick=()=>{conf.hidden=true;redo=strokes.reverse();strokes=[];redraw();save();clearMarks()};
+
+/* ---------- self-check: show the answer, the student marks it, mistakes get an explanation ---------- */
+const modeBtn=document.getElementById('modeBtn'),tally=document.getElementById('tally');
+const allLis=[...sheet.querySelectorAll('li')];
+let results={};try{results=JSON.parse(ls.get('ps-res')||'{}')}catch(e){results={}}
+allLis.forEach((li,i)=>{const b=document.createElement('span');b.className='qn';b.textContent=i+1;b.setAttribute('aria-hidden','true');li.prepend(b);
+  const k=document.createElement('button');k.type='button';k.className='ck';k.textContent='✓ בדוק';
+  k.setAttribute('aria-label','בדוק את שאלה '+(i+1));li.appendChild(k)});
+function info(li){const n=allLis.indexOf(li)+1,a=li.querySelector('.ans');
+  const sec=li.closest('section');const ex=sec.querySelector(':scope > .ans.blk');
+  return{n,key:a?a.textContent.trim():'',example:ex?ex.textContent.trim():'',tip:li.dataset.tip||''}}
+function esc(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML}
+function paint(li){const n=allLis.indexOf(li)+1,st=results[n],q=li.querySelector('.qn');q.className='qn'+(st?' '+st:'');
+  const a=li.querySelector('.ans');if(a)a.classList.toggle('show',st==='wrong');
+  let w=li.querySelector('.why');
+  if(st==='wrong'){if(!w){w=document.createElement('button');w.type='button';w.className='why';w.textContent='💡 למה?';
+    w.setAttribute('aria-label','למה שאלה '+n+' לא נכונה');li.appendChild(w)}}else if(w)w.remove()}
+function updateTally(){const v=Object.values(results),ok=v.filter(x=>x==='correct').length;
+  tally.textContent=v.length?`${ok} / ${v.length} נכונות`:'';tally.hidden=!v.length}
+function store(){ls.set('ps-res',JSON.stringify(results))}
+function clearMarks(){results={};store();closePop();allLis.forEach(paint);updateTally()}
+
+const pop=document.getElementById('pop');
+function closePop(){pop.hidden=true;pop.dataset.num=''}
+function place(li){pop.hidden=false;const sr=sheet.getBoundingClientRect(),lr=li.getBoundingClientRect(),W=Math.min(460,sheet.clientWidth-32);
+  pop.style.width=W+'px';pop.style.left=Math.max(16,Math.min(sheet.clientWidth-W-16,lr.right-sr.left+70-W))+'px';
+  pop.style.top=(lr.top-sr.top+Math.min(lr.height,52)+6)+'px';pop.scrollIntoView({block:'nearest',behavior:'smooth'})}
+// step 1: show the right answer and let the student mark themselves
+function openAsk(li){const r=info(li);pop.className='pop ask';pop.dataset.num=r.n;pop.dataset.mode='ask';
+  pop.innerHTML=`<div class="pop-h"><span>שאלה ${r.n}</span><button type="button" class="pop-x" aria-label="סגור">✕</button></div>`+
+    (r.key?`<div class="pop-row"><span class="lbl">התשובה הנכונה:</span> <span class="en ok">${esc(r.key)}</span></div>`:
+      `<div class="pop-row"><span class="lbl">דוגמה:</span> <span class="en ok">${esc(r.example.replace(/^Example:\s*/,''))}</span></div><p>${esc(r.tip)}</p>`)+
+    `<p class="q">כתבת כמו התשובה?</p><div class="pop-btns"><button type="button" class="yes" data-act="yes">✓ צדקתי</button><button type="button" class="no" data-act="no">✗ טעיתי</button></div>`;
+  place(li)}
+// step 2: explanation for a mistake
+function openWhy(li){const r=info(li);pop.className='pop wrong';pop.dataset.num=r.n;pop.dataset.mode='why';
+  pop.innerHTML=`<div class="pop-h"><span>שאלה ${r.n} · <span class="chip">טעות</span></span><button type="button" class="pop-x" aria-label="סגור">✕</button></div>`+
+    (r.key?`<div class="pop-row"><span class="lbl">התשובה הנכונה:</span> <span class="en ok">${esc(r.key)}</span></div>`:'')+
+    (r.tip?`<div class="pop-tip">${esc(r.tip)}</div>`:'')+`<p class="hint2">תקנו בעט ולחצו שוב על "✓ בדוק".</p>`;
+  place(li)}
+pop.addEventListener('click',e=>{const li=allLis[+pop.dataset.num-1];if(!li)return;
+  if(e.target.closest('.pop-x')){closePop();return}
+  const act=e.target.closest('[data-act]');if(!act)return;
+  results[+pop.dataset.num]=act.dataset.act==='yes'?'correct':'wrong';store();paint(li);updateTally();
+  if(act.dataset.act==='yes'){closePop()}else openWhy(li)});
+sheet.addEventListener('click',e=>{if(e.target.closest('#pop'))return;
+  const w=e.target.closest('.why');if(w){const li=w.closest('li');(!pop.hidden&&pop.dataset.mode==='why'&&+pop.dataset.num===allLis.indexOf(li)+1)?closePop():openWhy(li);return}
+  const k=e.target.closest('.ck');if(k&&document.body.classList.contains('checkMode'))openAsk(k.closest('li'))});
+document.addEventListener('pointerdown',e=>{if(pop.hidden)return;if(e.target.closest('#pop,.why,.ck'))return;closePop()});
+
+function setSwitch(btn,on){btn.setAttribute('aria-checked',on)}
+const modeOn=ls.get('ps-check')!=='0';document.body.classList.toggle('checkMode',modeOn);setSwitch(modeBtn,modeOn);
+modeBtn.onclick=()=>{const on=document.body.classList.toggle('checkMode');setSwitch(modeBtn,on);ls.set('ps-check',on?'1':'0');if(!on)closePop()};
+allLis.forEach(paint);updateTally();
+
+const kb=document.getElementById('keyBtn');
+kb.onclick=()=>{const on=document.body.classList.toggle('key');setSwitch(kb,on)};
+
+let t;function save(){clearTimeout(t);t=setTimeout(()=>ls.set('app-ink',JSON.stringify(strokes)),300)}
+try{strokes=JSON.parse(ls.get('app-ink')||'[]')}catch(e){strokes=[]}
+resize();sync();
+})();
+</script>
+
+<script>if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}</script>
+</body></html>
